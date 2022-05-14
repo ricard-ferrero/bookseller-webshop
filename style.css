@@ -1,0 +1,401 @@
+* {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* ----------------------------------------------------------------------------------
+-- MEDIA QUERY para MOBILE ----------------------------------------------------------
+------------------------------------------------------------------------------------ */
+
+
+body {
+	display: grid;
+	grid-template-areas: 
+		'header header'
+		'nav aside'
+		'main main'
+		'footer footer';
+	grid-template-columns: 1fr 1fr;
+	min-height: 100vh;
+	background: #f2f2f2;
+}
+
+
+/*--------- HEADER ----------*/
+
+header#header-web {
+	grid-area: header;
+	background: #222831;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: 20px;
+}
+
+div#title-head {
+	background: #f96d00;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	color: white;
+	border-radius: 100px;
+	font-size: 1em;
+}
+
+img.logotip {
+	height: 3em;
+	border: 5px solid white;
+	border-radius: 50%;
+	padding: 10px;
+}
+
+h1.logotip {
+	margin: 10px;
+}
+
+div#search {
+	margin-top: 10px;
+	display: flex;
+}
+
+button.search {
+	padding: 8px;
+}
+
+
+/*----------- NAV ----------*/
+nav {
+	grid-area: nav;
+	display: grid;
+}
+nav > div {
+	padding: 10px 20px;
+}
+
+nav > div ul {
+	list-style: none;
+}
+
+input.btn-reset {
+	padding: 10px;	
+}
+
+input.btn-reset, nav li {
+	width: 100%;
+	margin: 15px 0;
+	font-size: 1.2em;
+}
+
+nav li {
+	display: flex;
+	justify-content: space-between;
+}
+
+nav .filter-form-item {
+	width: 180px;
+}
+
+
+/*---------- ASIDE ---------*/
+aside {
+	grid-area: aside;
+	display: grid;
+}
+
+aside table {
+	width: 100%;
+}
+
+aside table td {
+	padding: 5px;
+}
+
+aside table .author {
+	font-style: italic;
+	font-size: 0.8rem;
+}
+
+table td.right-align {
+	text-align: right;
+}
+
+table td.left-align {
+	text-align: left;
+}
+
+aside table td.delete-x {
+	font-weight: bold;
+	text-align: center;
+	color: red;
+	user-select: none;
+}
+
+aside tfoot {
+	font-weight: bold;
+}
+
+aside footer {
+	display: flex;
+	justify-content: space-around;
+}
+
+aside footer img {
+	height: 3em;
+}
+
+aside footer button {
+	padding: 5px;
+}
+
+/*----------- MAIN -----------*/
+main {
+	grid-area: main;
+}
+
+main img{
+	height: 2em;
+}
+
+main td.button {
+	text-align: center;
+}
+
+main td.button:hover img{
+	transform: scale(1.2);
+}
+
+#main-table {
+	margin: 0 auto;
+	width: 100%;
+}
+
+#main-table tr {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+#main-table tr:hover {
+	box-shadow: 2px 2px 10px #f96d00;
+}
+
+#main-table td {
+	padding: 5px;
+	border: 0px;
+}
+
+#main-table .title {
+	font-weight: bold;
+}
+
+#main-table .author {
+	font-style: italic;
+}
+
+#main-table .small {
+	font-size: 0.8em;
+}
+
+#main-table .price {
+	min-width: 70px;
+}
+
+
+
+/*---------- FOOTER -----------*/
+footer {
+	grid-area: footer;
+	background: #393e46;
+	color: #f2f2f2;
+	padding: 10px 10px;
+}
+
+footer p {
+	margin: 10px;
+}
+
+footer a {
+	color: #f96d00;
+}
+
+
+
+/*--------- navigation ---------*/
+nav:hover .display-none, aside:hover .display-none {
+	display: block;
+	width: 60vw;
+}
+
+/*---------- CLASSES -----------*/
+.display-none {
+	display: none;
+}
+
+.header-section {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	background: #f96d00;
+	margin: 1px;
+	min-height: 90px;
+	color: white;
+}
+
+.header-section-icon {
+	height: 3em;
+}
+
+/* ----------------------------------------------------------------------------------
+-- MEDIA QUERY para PC --------------------------------------------------------------
+---------------------------------------------------------------------------------- */
+@media only screen and (min-width: 768px) {
+
+body {
+	grid-template-areas: 
+		'header header'
+		'nav nav'
+		'main aside'
+		'footer footer';
+	grid-template-columns: 1fr auto;
+}
+
+/*--------- HEADER ----------*/
+
+header#header-web {
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 30px 40px;
+}
+
+button.search {
+	padding: 2px;
+}
+
+/*--------- navigation ---------*/
+nav:hover .display-none, aside:hover .display-none {
+	display: block;
+	width: auto;
+}
+
+/*---------- CLASSES -----------*/
+.display-none {
+	display: block;
+}
+
+.header-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f96d00;
+	margin: 0px;
+	min-height: auto;
+	color: white;
+}
+
+.header-section-icon {
+	height: 2em;
+}
+/*----------- NAV ----------*/
+nav {
+	grid-area: nav;
+	display: grid;
+	background-color: #f96d00;
+	color: #f2f2f2;
+	padding: 5px 0;
+}
+
+nav > div {
+	padding: 0;
+}
+
+nav form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+nav ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+input.btn-reset, nav li {
+	width: auto;
+	margin: 8px;
+	font-size: 1rem;
+}
+
+input.btn-reset {
+	padding: 5px;
+	font-size: 0.8rem;
+}
+
+nav li {
+	display: flex;
+	justify-content: center;
+}
+
+nav label {
+	margin-right: 5px;
+}
+
+nav .filter-form-item {
+	width: auto;
+}
+
+
+/*---------- ASIDE ---------*/
+
+
+aside {
+	grid-area: aside;
+	display: grid;
+	grid-template-rows: auto 1fr;
+	margin-top: 2px;
+}
+
+aside .header-section {
+	padding: 8px;
+}
+
+aside table {
+	min-width: 400px;
+}
+
+aside table .author {
+	font-size: 1rem;
+}
+
+aside footer img {
+	height: 1.8em;
+}
+
+
+/*----------- MAIN -----------*/
+#main-table tr {
+	display: table-row;
+}
+
+#main-table .title {
+	font-weight: bold;
+}
+
+#main-table .small {
+	font-size: 0.8em;
+}
+
+#main-table .author.small{
+	font-style: italic;
+	font-size: 1em;
+}
+
+#main-table .price {
+	min-width: 70px;
+}
+
+
+}/*----fin media query PC -------*/

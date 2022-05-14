@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Book Seller</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/svg+xml" href="./source/favicon/favicon.svg">
+	<link rel="icon" type="image/png" href="./source/favicon/favicon.png">
+</head>
+<body>
+	<header id="header-web">
+		<div id="title-head">
+			<img class="logotip" src="./source/white/book.svg" alt="Logotip">
+			<h1 class="logotip">Book Seller</h1>
+		</div>
+		<div id="search">
+			<input class="search" placeholder="Search...">
+			<button class="search"><img src="./source/black/search.svg" alt="Search!"></button>
+		</div>
+	</header>
+
+
+	<nav>
+		<header class="header-section">
+			<img class="header-section-icon" src="./source/white/filter.svg" alt="Filter icon">
+			<h2>Filters</h2>
+		</header>
+		<div class="display-none">
+		<form>
+		<ul>
+			<li>
+				<label for="form-author">Author</label>
+				<select id="form-author" class="filter-form-item">
+					<option value=""></option>
+					<option value="Richard Ferdman">Richard Ferdman</option>
+					<option value="Elysa Simpson">Elysa Simpson</option>
+					<option value="Nicolas Biden">Nicolas Biden</option>
+					<option value="Bill Jobs">Bill Jobs</option>
+					<option value="Steve Gates">Steve Gates</option>
+				</select>
+			</li>
+			<li>
+				<label for="form-year">Year</label>
+				<select id="form-year" class="filter-form-item">
+					<option value=""></option>
+				</select>
+			</li>
+			<li>
+				<label for="form-cover">Cover</label>
+				<select id="form-cover" class="filter-form-item">
+					<option value=""></option>
+					<option value="soft">Soft</option>
+					<option value="hard">Hard</option>
+				</select>
+			</li>
+			<li>
+				<label for="form-pocketbook">Pocketbook</label>
+				<select id="form-pocketbook" class="filter-form-item">
+					<option value=""></option>
+					<option value="false">Normal</option>
+					<option value="true">Pocketbook</option>
+				</select>
+			</li>
+			<li>
+				<label for="form-min">Min. price</label>
+				<input type="number" id="form-min" value="0" min="0" max="100" class="filter-form-item">
+			</li>
+			<li>
+				<label for="form-max">Max. price</label>
+				<input type="number" id="form-max" value="100" min="0" max="100" class="filter-form-item">
+			</li>
+		</ul>
+			<input type="reset" class="btn-reset">
+		</form>
+		</div>
+	</nav>
+
+
+	<aside>
+		<header class="header-section">
+			<img class="header-section-icon" src="./source/white/cart.svg" alt="Cart icon">
+			<h2>Cart</h2>
+		</header>
+		<div class="display-none">
+		<table id="cart-table">
+			<!-- Title 	Author  Price  €  Delete-->
+			<tbody id="cart-table-content">
+				<!--
+				<tr>
+					<td>Learning Maths</td>
+					<td class="author">Richard Ferdman</td>
+					<td class="right-align">19.50</td>
+					<td class="left-align">€</td>
+					<td class="delete-x">X</td>
+				</tr>
+				-->
+				 
+			</tbody>
+			<tfoot>
+				<td colspan="2">Total</td>
+				<td id="total-price-cart" class="right-align">0.00</td>
+				<td class="left-align">€</td>
+			</tfoot>	
+		</table>
+		<footer>
+			<button id="btn-order"><img src="./source/black/checkout.svg" alt="Going to buy!"></button>
+			<button id="btn-remove-cart"><img src="./source/black/remove.svg" alt="Remove all"></button>
+		</footer>
+		</div>
+	</aside>
+
+
+	<main>
+		<table id="main-table">
+			<tbody id="main-table-content">
+			</tbody>
+		</table>
+	</main>
+
+
+	<footer>
+		<p>All the information is fake, created with the only porpous to practice and study.</p>
+		<p>Book image from: <a href="https://commons.wikimedia.org/wiki/File:Book.svg">RRZEicons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons</p>
+		<p>Icons from: <a href="https://fonts.google.com/icons">Google Fonts - Icons</a></p>
+	</footer>
+
+<script type="text/javascript" src="bookDataBase.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
